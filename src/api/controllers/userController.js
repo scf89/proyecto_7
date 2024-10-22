@@ -6,14 +6,16 @@ const bcrypt = require('bcryptjs');
 
 // Registrar usuario
 const registerUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { userName, email, password, rol } = req.body;
+  console.log(email);
   const userExists = await User.findOne({ email });
 
   if (userExists) {
     return res.status(400).json({ message: 'User already exists' });
   }
 
-  const user = await User.create({ name, email, password });
+  const user = await User.create({ userName, email, password, rol });
+  console.log(user._id);
   res.status(201).json({ token: generateToken(user._id) });
 };
 
