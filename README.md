@@ -52,9 +52,4 @@ La API utiliza JWT para la autenticación. Al iniciar sesión, el usuario recibe
 
 
 
-Las contribuciones son bienvenidas. Si tienes alguna mejora o corrección, siéntete libre de hacer un pull request.
-
-Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 
