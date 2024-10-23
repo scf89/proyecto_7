@@ -1,15 +1,13 @@
 // routes/coworkingRoutes.js
 const express = require('express');
 const router = express.Router();
-const coworkingController = require('../controllers/coworkingController');
+const {getCoworkingById,updateCoworking,deleteCoworking,getAllCoworkings,createCoworking} = require('../controllers/coworkingController');
+const { isAdmin, isAuth} = require('../../middlewares/auth');
 
-// Rutas específicas primero
-router.get('/:id', coworkingController.getCoworkingById); // Obtener un coworking específico
-router.put('/:id', coworkingController.updateCoworking);   // Actualizar un coworking específico
-router.delete('/:id', coworkingController.deleteCoworking); // Eliminar un coworking específico
-
-// Luego la ruta general
-router.get('/', coworkingController.getAllCoworkings); // Obtener todos los coworkings
-router.post('/', coworkingController.createCoworking);   // Crear un nuevo coworking
+router.get('/:id', getCoworkingById); // Obtener un coworking específico
+router.put('/:id', [isAuth, isAdmin],updateCoworking);   // Actualizar un coworking específico
+router.delete('/:id',[isAuth, isAdmin], deleteCoworking); // Eliminar un coworking específico
+router.get('/', getAllCoworkings); // Obtener todos los coworkings
+router.post('/',[isAuth, isAdmin], createCoworking);   // Crear un nuevo coworking
 
 module.exports = router;
