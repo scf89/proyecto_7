@@ -31,11 +31,11 @@ Bcrypt para encriptación de contraseñas
 ### Coworkings
 | Método | Ruta                                     | Descripción                           |
 |--------|------------------------------------------|---------------------------------------|
-|GET| /api/coworkings| Obtener todos los espacios de coworking (solo administradores).|
-|POST| /api/coworkings| Crear un nuevo espacio de coworking (solo administradores).|
-|GET| /api/coworkings/:id| Obtener un espacio de coworking específico.|
-|PUT |/api/coworkings/:id| Actualizar un espacio de coworking específico (solo administradores).|
-|DELETE| /api/coworkings/:id| Eliminar un espacio de coworking específico (solo administradores).|
+|GET| /api/coworking| Obtener todos los espacios de coworking (solo administradores).|
+|POST| /api/coworking| Crear un nuevo espacio de coworking (solo administradores).|
+|GET| /api/coworking/:id| Obtener un espacio de coworking específico.|
+|PUT |/api/coworking/:id| Actualizar un espacio de coworking específico (solo administradores).|
+|DELETE| /api/coworking/:id| Eliminar un espacio de coworking específico (solo administradores).|
 
 ### Reservas
 | Método | Ruta                                     | Descripción                           |
